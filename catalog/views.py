@@ -4,9 +4,7 @@ from .models import User
 
 
 def index(request):
-    latest_user_list = User.objects.order_by('-name')[:3]
-    output = ', '.join([n.name for n in latest_user_list])
-    return HttpResponse(output)
+    return HttpResponse("You are at the index.")
 
 
 def detail(request, User_id):

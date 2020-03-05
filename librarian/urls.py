@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
+from catalog import views
 
 
 urlpatterns = [
@@ -25,7 +26,9 @@ urlpatterns = [
 urlpatterns += [
     path('catalog/', include('catalog.urls')),
 ]
-"""# Use include() to add paths from the catalog application 
+
+'''
+# Use include() to add paths from the catalog application 
 
 #Add URL maps to redirect the base URL to application
 from django.views.generic import RedirectView
@@ -36,4 +39,5 @@ urlpatterns += [
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)"""
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+'''
